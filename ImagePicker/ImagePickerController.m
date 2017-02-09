@@ -7,8 +7,11 @@
 //
 
 #import "ImagePickerController.h"
+#import "_captain.h"
+#import "_vendor_blockskit.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Photos/PHPhotoLibrary.h>
+#import <AVFoundation/AVFoundation.h>
 
 static NSString *AVCaptureDeviceDidStartRunningNotification = @"AVCaptureDeviceDidStartRunningNotification";
 
