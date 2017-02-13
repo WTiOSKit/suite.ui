@@ -9,9 +9,9 @@
 #import <objc/runtime.h>
 #import "NSObject+Easy.h"
 #import "mvc/mvc-native.h"
-#import "vendor/ui.SVProgressHUD/SVProgressHUD.h"
-#import "vendor/ui.MBProgressHUD/MBProgressHUD.h"
-#import "vendor/ui.LSYLoadingHUD/LSYLoadingHUD.h"
+#import "ui/SVProgressHUD/SVProgressHUD.h"
+#import "ui/MBProgressHUD/MBProgressHUD.h"
+#import "ui/LSYLoadingHUD/LSYLoadingHUD.h"
 
 #import "_pragma_push.h"
 
