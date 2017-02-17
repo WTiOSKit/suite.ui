@@ -184,6 +184,43 @@
     return ([self.superview.subviews objectAtIndex:0]==self);
 }
 
+- (BOOL)isDisplayedInScreen {
+    if (self == nil) {
+        return NO;
+    }
+    
+    CGRect screenRect = [UIScreen mainScreen].bounds;
+    
+    // 转换view对应window的Rect
+    CGRect rect = [self convertRect:self.frame fromView:nil];
+    if (CGRectIsEmpty(rect) || CGRectIsNull(rect)) {
+        return NO;
+    }
+    
+    // 若 view 隐藏
+    if (self.hidden) {
+        return NO;
+    }
+    
+    // 若没有 superview
+    if (self.superview == nil) {
+        return NO;
+    }
+    
+    // 若size为CGrectZero
+    if (CGSizeEqualToSize(rect.size, CGSizeZero)) {
+        return  NO;
+    }
+    
+    // 获取 该view与window 交叉的 Rect
+    CGRect intersectionRect = CGRectIntersection(rect, screenRect);
+    if (CGRectIsEmpty(intersectionRect) || CGRectIsNull(intersectionRect)) {
+        return NO;
+    }
+    
+    return YES;
+}
+
 - (void)swapDepthsWithView:(UIView*)swapView {
     [self.superview exchangeSubviewAtIndex:[self getSubviewIndex] withSubviewAtIndex:[swapView getSubviewIndex]];
 }

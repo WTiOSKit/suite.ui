@@ -6,8 +6,8 @@
 //  Copyright © 2016 OpenTeam. All rights reserved.
 //
 
-#import "foundation/_foundation.h"
-#import "system/_system.h"
+#import "_foundation.h"
+#import "_system.h"
 
 @interface _Service : NSObject
 

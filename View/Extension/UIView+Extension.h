@@ -47,6 +47,7 @@
 
 - (BOOL)isInFront;
 - (BOOL)isAtBack;
+- (BOOL)isDisplayedInScreen;
 
 - (void)swapDepthsWithView:(UIView*)swapView;
 

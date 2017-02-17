@@ -77,6 +77,10 @@ NSString *PushSereviceAdvertisingId = nil;
 }
 
 + (void)handleWhenApplication:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+
+    // Print deviceToken
+    LOG(@"device token = %@", [self formatDeviceToken:deviceToken]);
+    
     [self registerDeviceToken:deviceToken];
 }
 
@@ -243,6 +247,14 @@ NSString *PushSereviceAdvertisingId = nil;
 }
 
 #pragma mark - Helper
+
+// 将APNS NSData类型token 格式化成字符串
++ (NSString *)formatDeviceToken:(NSData *)deviceToken {
+    return [[[[deviceToken description]
+              stringByReplacingOccurrencesOfString: @"<" withString: @""]
+             stringByReplacingOccurrencesOfString: @">" withString: @""]
+            stringByReplacingOccurrencesOfString: @" " withString: @""];
+}
 
 // log NSSet with UTF8
 // if not ,log will be \Uxxx
