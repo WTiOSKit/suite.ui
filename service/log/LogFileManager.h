@@ -6,8 +6,7 @@
 //
 //
 
-#import <Foundation/Foundation.h>
-#import "foundation/_foundation.h"
+#import "_greats.h"
 
 /**
  *  @desc 暂时不支持，文件配置

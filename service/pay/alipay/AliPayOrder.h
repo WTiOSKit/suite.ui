@@ -6,8 +6,7 @@
 //
 //
 
-#import <Foundation/Foundation.h>
-#import "system/_system.h"
+#import "_greats.h"
 
 @interface AliPayOrder : NSObject
 

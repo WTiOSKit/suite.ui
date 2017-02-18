@@ -6,12 +6,11 @@
 //
 //
 
+#import "_greats.h"
 #import "GrowthIntercepter.h"
 #import "GrowthService.h"
-#import "_vendor_Interceptor.h"
 
-@interface GrowthIntercepter ()
-{
+@interface GrowthIntercepter () {
     NSMutableDictionary *GrowthIntercepterDic;
 }
 @end
