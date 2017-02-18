@@ -6,8 +6,7 @@
 //
 //
 
-#import <Foundation/Foundation.h>
-#import "foundation/_foundation.h"
+#import "_greats.h"
 #import "_animation_protocol.h"
 
 #define PopupAnimationDurationTimeInterval .3f

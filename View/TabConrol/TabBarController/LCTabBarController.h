@@ -10,7 +10,7 @@
 //
 //  V 1.3.3
 
-#import <UIKit/UIKit.h>
+#import "_greats.h"
 #import "LCTabBar.h"
 
 /**

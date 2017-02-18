@@ -17,6 +17,8 @@
 #import "SNShareSms.h"
 #import "SNShareSina.h"
 #import "SNShareWechat.h"
+#import "_appearance.h"
+#import "_popup.h"
 
 static const float kTitleIconSpace = 8.0;
 

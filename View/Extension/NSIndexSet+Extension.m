@@ -14,6 +14,7 @@
 //  Welcome!
 //
 
+#import <UIKit/UIKit.h>
 #import "NSIndexSet+Extension.h"
 
 @implementation NSIndexSet (Util)

@@ -8,7 +8,7 @@
 
 #import "_precompile.h"
 #import "_vendor_reactivecocoa.h"
-#import "foundation/_foundation.h"
+#import "_foundation.h"
 
 @class RACTuple;
 @class RACSignal;

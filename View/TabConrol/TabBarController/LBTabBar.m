@@ -7,6 +7,9 @@
 //
 
 #import "LBTabBar.h"
+#import "_precompile.h"
+#import "UIView+Extension.h"
+#import "UIColor+Extension.h"
 #import <objc/runtime.h>
 
 static NSString *plusButtonImage = nil;

@@ -6,8 +6,8 @@
 //  Copyright © 2015年 OpenTeam. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
+#import "_greats.h"
+#import "BaseViewController.h"
 #import "ShareParamBuilder.h"
 
 #pragma mark -

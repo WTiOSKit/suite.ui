@@ -25,8 +25,9 @@
 //  Copyright (c) 2014 Alex Usbergo. All rights reserved.
 //
 
-#import "UIERealTimeBlurView.h"
 #import <objc/runtime.h>
+#import "UIERealTimeBlurView.h"
+#import "_tools.h"
 
 /*** Returns the os version */
 NSUInteger UIEDeviceSystemMajorVersion();
@@ -53,8 +54,7 @@ const CGFloat UIERealTimeBlurViewTintColorAlpha = 0.1;
     UIToolbar *_nativeBlurView;
 }
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         
@@ -84,11 +84,10 @@ const CGFloat UIERealTimeBlurViewTintColorAlpha = 0.1;
     return self;
 }
 
-- (void)setTintColor:(UIColor*)tintColor
-{
-    if (_ios7)
+- (void)setTintColor:(UIColor*)tintColor {
+    if (_ios7) {
         [super setTintColor:tintColor];
-    else {
+    } else {
         _tint = tintColor;
         [_tintLayer setBackgroundColor:_tint.CGColor];
     }
@@ -96,8 +95,7 @@ const CGFloat UIERealTimeBlurViewTintColorAlpha = 0.1;
 
 #pragma mark - Rendering
 
-- (void)uie_renderLayerWithView:(UIView*)superview
-{
+- (void)uie_renderLayerWithView:(UIView*)superview {
     if (_ios7) return;
     
     //get the visible rect
@@ -140,8 +138,7 @@ const CGFloat UIERealTimeBlurViewTintColorAlpha = 0.1;
 }
 
 /*** Hide or show all the DRNRealTimeBlurView subviews from the target view */
-- (void)uie_toggleBlurViewsInView:(UIView*)view hidden:(BOOL)hidden alpha:(CGFloat)originalAlpha
-{
+- (void)uie_toggleBlurViewsInView:(UIView*)view hidden:(BOOL)hidden alpha:(CGFloat)originalAlpha {
     if (_ios7) return;
     
     for (UIView *subview in view.subviews)
@@ -151,8 +148,7 @@ const CGFloat UIERealTimeBlurViewTintColorAlpha = 0.1;
 
 #pragma mark - Refreshing
 
-- (void)willMoveToSuperview:(UIView*)superview
-{
+- (void)willMoveToSuperview:(UIView*)superview {
     if (_ios7) return;
     
     [self uie_renderLayerWithView:superview];
@@ -176,8 +172,7 @@ const CGFloat UIERealTimeBlurViewTintColorAlpha = 0.1;
 }
 
 /*** Manually performs the refresh of the blurred background */
-- (void)refresh
-{
+- (void)refresh {
     if (_ios7) return;
     
     if (self.superview != nil) {
@@ -188,8 +183,7 @@ const CGFloat UIERealTimeBlurViewTintColorAlpha = 0.1;
 @end
 
 /*** Returns the os version */
-NSUInteger UIEDeviceSystemMajorVersion()
-{
+NSUInteger UIEDeviceSystemMajorVersion() {
     static NSUInteger __osVersion = -1;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
