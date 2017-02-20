@@ -33,7 +33,7 @@
 
 - (id)initWithPhotos:(NSArray*)photos {
 	if (self = [super init]) {
-		_photos = [photos retain];
+		_photos = photos;
 		_numberOfPhotos = [_photos count];
 		
 	}
@@ -48,13 +48,8 @@
 - (void)removePhotoAtIndex:(NSInteger)index {
     NSMutableArray *arrayToSet = [NSMutableArray arrayWithArray:_photos];
     [arrayToSet removeObjectAtIndex:index];
-    _photos = [arrayToSet retain];
+    _photos = [arrayToSet copy];
     _numberOfPhotos = [_photos count];
-}
-
-- (void)dealloc{
-	[_photos release], _photos=nil;
-	[super dealloc];
 }
 
 @end

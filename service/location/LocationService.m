@@ -6,6 +6,7 @@
 //
 //
 
+#import "_vendor_lumberjack.h"
 #import "LocationService.h"
 #import "CityGeoCoder.h"
 //#import "Reachability.h"

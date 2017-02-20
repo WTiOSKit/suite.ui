@@ -10,7 +10,8 @@
 #import "POP.h"
 
 #import "_popup.h"
-#import "mvc-native.h"
+#import "_image.h"
+#import "_ui_core.h"
 
 static const NSUInteger CoverViewTag = 99999;
 
@@ -79,7 +80,7 @@ static const NSUInteger CoverViewTag = 99999;
     
     if (popup.needBlurBackgroundView) {
         // 获取截屏图，并高斯模糊
-        UIImage *image = [UIImage screenshotForView:window.rootViewController.view];
+        UIImage *image = [UIImage captureWithView:window.rootViewController.view];
         image = [image boxblurImageWithBlur:0.3];
         popup.blurView = [[UIImageView alloc] initWithImage:image];
         popup.blurView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;

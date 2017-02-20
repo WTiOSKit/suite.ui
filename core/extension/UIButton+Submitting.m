@@ -22,7 +22,7 @@
 - (void)beginSubmitting:(NSString *)title {
     [self endSubmitting];
     
-    _submitting = @YES;
+    self.submitting = @YES;
     self.hidden = YES;
     
     self.modalView = [[UIView alloc] initWithFrame:self.frame];

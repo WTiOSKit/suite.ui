@@ -6,6 +6,7 @@
 //  Copyright © 2015年 Leo. All rights reserved.
 //
 
+#import "_ui_core.h"
 #import "LCTabBarItem.h"
 #import "LCTabBarBadge.h"
 #import "LCTabBarCONST.h"

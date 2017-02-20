@@ -1,3 +1,5 @@
+#import "_precompile.h"
+#import "_ui_core.h"
 #import "PYPhotoView.h"
 #import "PYPhoto.h"
 #import "PYConst.h"

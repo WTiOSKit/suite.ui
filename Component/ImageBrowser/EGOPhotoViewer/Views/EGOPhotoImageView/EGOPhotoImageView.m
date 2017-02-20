@@ -24,6 +24,9 @@
 //  THE SOFTWARE.
 //
 
+#import "_precompile.h"
+#import "_ui_core.h"
+#import "MBProgressHUD.h"
 #import "EGOPhotoImageView.h"
 #import "UIImageView+WebCache.h"
 
@@ -69,16 +72,14 @@
 		scrollView.opaque = YES;
 		scrollView.delegate = self;
 		[self addSubview:scrollView];
-		_scrollView = [scrollView retain];
-		[scrollView release];
+		_scrollView = scrollView;
 
 		UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
 		imageView.opaque = YES;
 		imageView.contentMode = UIViewContentModeScaleAspectFit;
 		imageView.tag = ZOOM_VIEW_TAG;
 		[_scrollView addSubview:imageView];
-		_imageView = [imageView retain];
-		[imageView release];
+		_imageView = imageView;
         
         QQingProgressView *progressView = [[QQingProgressView alloc] init];
         progressView.frame = CGRectMake(((CGRectGetWidth(self.frame) - progressView.frame.size.width) / 2),
@@ -88,8 +89,7 @@
 		progressView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
 		[self addSubview:progressView];
         _progressView.hidden = YES;
-		_progressView = [progressView retain];
-		[progressView release];
+		_progressView = progressView;
 		
 //		RotateGesture *gesture = [[RotateGesture alloc] initWithTarget:self action:@selector(rotate:)];
 //		[self addGestureRecognizer:gesture];
@@ -98,12 +98,10 @@
         UIView *topClearView = [[UIView alloc] initWithFrame:self.bounds];
         topClearView.backgroundColor = [UIColor clearColor];
         [self addSubview:topClearView];
-        _topClearViewForTapClose = [topClearView retain];
-        [topClearView release];
+        _topClearViewForTapClose = topClearView;
         
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapForCloseAction:)];
         [_topClearViewForTapClose addGestureRecognizer:tapGesture];
-        [tapGesture release];
         
         _scrollView.userInteractionEnabled = NO;
         _topClearViewForTapClose.hidden = NO;
@@ -125,8 +123,8 @@
 	if (!aPhoto) return; 
 	if ([aPhoto isEqual:self.photo]) return;
 	
-	[_photo release], _photo = nil;
-	_photo = [aPhoto retain];
+    _photo = nil;
+	_photo = aPhoto;
 	
     void (^startLoadImageOperation)(void) = ^{
         _loading = YES;
@@ -746,14 +744,12 @@
 	
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	
-    [_progressView release], _progressView=nil;
-	[_activityView release], _activityView=nil;
-	[_imageView release]; _imageView=nil;
-	[_scrollView release]; _scrollView=nil;
-    [_topClearViewForTapClose release]; _topClearViewForTapClose = nil;
-	[_photo release]; _photo=nil;
-    [super dealloc];
-	
+    _progressView=nil;
+	_activityView=nil;
+	_imageView=nil;
+	_scrollView=nil;
+    _topClearViewForTapClose = nil;
+	_photo=nil;	
 }
 
 

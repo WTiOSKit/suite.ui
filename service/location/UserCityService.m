@@ -6,6 +6,7 @@
 //  Copyright © 2015年 OpenTeam. All rights reserved.
 //
 
+#import "_vendor_lumberjack.h"
 #import "UserCityService.h"
 #import "CityGeoCoder.h"
 #import "RLMCity.h"

@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 QQing. All rights reserved.
 
 #import "QQingProgressView.h"
+#import "_appearance.h"
 
 #define DEGREES_TO_RADIANS(x) (x)/180.0*M_PI
 #define RADIANS_TO_DEGREES(x) (x)/M_PI*180.0

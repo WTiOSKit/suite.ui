@@ -6,6 +6,8 @@
 //  Copyright © 2016 OpenTeam. All rights reserved.
 //
 
+#import "_vendor_lumberjack.h"
+
 #import "SNShareSina.h"
 #import "WeiboSDK.h"
 #import "ImageUtil.h"

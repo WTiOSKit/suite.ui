@@ -6,8 +6,11 @@
 //  Copyright © 2016 OpenTeam. All rights reserved.
 //
 
-#import "UIButton+Extension.h"
 #import "_precompile.h"
+#import "UIButton+Extension.h"
+#import "_image.h"
+#import "UIView+Extension.h"
+#import "UIColor+Extension.h"
 
 @implementation UIButton (Adjust)
 
@@ -80,10 +83,6 @@
 @end
 
 #pragma mark -
-
-#import "UIImage+Utility.h"
-#import "UIView+Extension.h"
-#import "UIColor+Extension.h"
 
 @implementation UIButton ( Setting )
 

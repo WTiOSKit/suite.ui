@@ -7,7 +7,7 @@
 //
 
 #import "_router.h"
-#import "mvc/ViewController/extension/UINavigationController+Extension.h"
+#import "UINavigationController+Extension.h"
 
 @interface _Router () {
     @public

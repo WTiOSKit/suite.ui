@@ -7,6 +7,7 @@
 //
 
 #import "LBTabBarController.h"
+#import "BaseNavigationController.h"
 
 @interface LBTabBarController ()<LBTabBarDelegate>
 

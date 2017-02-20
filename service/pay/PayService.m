@@ -7,7 +7,7 @@
 //
 
 #import "PayService.h"
-#import "mvc-native.h"
+#import "_easycoding.h"
 
 @implementation PayService
 

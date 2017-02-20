@@ -7,7 +7,7 @@
 //
 
 #import "ImageUploadApi.h"
-#import "_core_network.h"
+#import "_network.h"
 
 @implementation GetUploadImageurlRequest
 

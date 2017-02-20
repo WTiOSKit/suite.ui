@@ -21,6 +21,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "_precompile.h"
 #import "IQToolbar.h"
 #import "IQKeyboardManagerConstantsInternal.h"
 #import "IQTitleBarButtonItem.h"

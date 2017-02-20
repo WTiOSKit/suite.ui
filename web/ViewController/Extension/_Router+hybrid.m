@@ -9,7 +9,7 @@
 #import "_Router+hybrid.h"
 #import "BaseWebViewController.h"
 
-@implementation _Router (hybrid)
+@implementation NSObject (hybrid)
 
 - (void)router_openHtml:(NSString *)url {
     [self router_openHtml:url extraParams:nil];

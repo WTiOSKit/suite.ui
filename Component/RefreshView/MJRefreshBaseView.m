@@ -11,7 +11,7 @@
 #import "UIView+Extension.h"
 #import "UIScrollView+Extension.h"
 #import "_appearance.h"
-#import <objc/runtime.h>
+#import <objc/message.h>
 
 @interface  MJRefreshBaseView()
 {

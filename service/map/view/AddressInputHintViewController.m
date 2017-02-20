@@ -9,6 +9,7 @@
 #import "AddressInputHintViewController.h"
 #import "UserCityService.h"
 #import "_ui_core.h"
+#import "_vendor_lumberjack.h"
 
 @interface AddressInputHintViewController () <UISearchBarDelegate,
                                               UITableViewDataSource,

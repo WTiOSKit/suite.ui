@@ -6,10 +6,13 @@
 //  Copyright © 2016年 leichunfeng. All rights reserved.
 //
 
+#import "_precompile.h"
+#import "_ui_core.h"
+#import "_vendor_sdwebimage.h"
+
 #import "LCFInfiniteScrollView.h"
 #import "LCFCollectionViewFlowLayout.h"
 #import "LCFCollectionViewCell.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface LCFInfiniteScrollView () <UICollectionViewDataSource, UICollectionViewDelegate>
 

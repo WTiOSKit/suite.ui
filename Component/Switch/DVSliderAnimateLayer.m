@@ -6,6 +6,7 @@
 //
 //
 
+#import "_ui_core.h"
 #import "DVSliderAnimateLayer.h"
 
 @interface DVSliderAnimateLayer ()

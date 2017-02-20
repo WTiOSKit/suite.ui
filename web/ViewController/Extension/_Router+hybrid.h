@@ -8,7 +8,7 @@
 
 #import "_router.h"
 
-@interface _Router (hybrid)
+@interface NSObject (hybrid)
 
 /**
  *  open html link

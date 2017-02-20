@@ -7,8 +7,8 @@
 //
 
 #import "UIColor+theme.h"
-#import "foundation/_foundation.h"
-#import "mvc/View/_view.h"
+#import "_foundation.h"
+#import "UIColor+Extension.h"
 
 @implementation UIColor (theme)
 

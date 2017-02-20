@@ -1,3 +1,4 @@
+#import "_ui_core.h"
 #import "PYPhotoCell.h"
 #import "PYPhoto.h"
 #import "PYPhotoView.h"

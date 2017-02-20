@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Dmitry Volevodz. All rights reserved.
 //
 
+#import "_ui_core.h"
+
 #import "DVSwitch.h"
 #import "DVSliderView.h"
 #import "DVSliderAnimateView.h"

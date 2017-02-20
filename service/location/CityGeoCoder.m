@@ -7,6 +7,7 @@
 //
 
 #import "_greats.h"
+#import "_vendor_lumberjack.h"
 #import "CityGeoCoder.h"
 #import "RLMCity.h"
 

@@ -8,6 +8,7 @@
 
 #import "ShareParamBuilder.h"
 #import "ShareHelper.h"
+#import "_date.h"
 
 @interface ShareParamBuilder ()
 
@@ -19,13 +20,13 @@
     if (self = [super init]) {
         self.objectId = [[NSDate date] toString:@"yyyy-MM-dd-HH-mm-ss"];
         
-        [AppConfig adapterAppHairDresser:^{
-            self.channelId  = nil;
-        } appCustomer:^{
-            self.channelId = nil;
-        } appMaster:^{
-            self.channelId = nil;
-        }];
+//        [AppConfig adapterAppHairDresser:^{
+//            self.channelId  = nil;
+//        } appCustomer:^{
+//            self.channelId = nil;
+//        } appMaster:^{
+//            self.channelId = nil;
+//        }];
     }
     
     return self;

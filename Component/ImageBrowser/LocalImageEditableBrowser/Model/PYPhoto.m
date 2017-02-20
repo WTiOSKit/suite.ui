@@ -1,3 +1,4 @@
+#import "_precompile.h"
 #import "PYPhoto.h"
 
 @implementation PYPhoto

@@ -6,6 +6,7 @@
 //  Copyright © 2016年 IT小子. All rights reserved.
 //
 
+#import "_ui_core.h"
 #import "HXTagAttribute.h"
 
 @implementation HXTagAttribute

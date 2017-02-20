@@ -33,7 +33,7 @@ static char kTextFieldHistoryviewIdentifyKey;
 
 @implementation UITextField ( History )
 
-@def_prop_custom(NSString *, identify, setIdentify, strong)
+@def_prop_custom(NSString *, identify, setIdentify, retain)
 
 - (UITableView *)historyTableView {
     UITableView *table = objc_getAssociatedObject(self, &kTextFieldHistoryviewIdentifyKey);

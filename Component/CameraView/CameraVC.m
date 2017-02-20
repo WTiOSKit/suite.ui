@@ -7,7 +7,7 @@
 //
 
 #import "CameraVC.h"
-#import "PhotoManager.h"
+//#import "PhotoManager.h"
 
 #pragma mark -
 

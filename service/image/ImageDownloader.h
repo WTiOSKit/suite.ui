@@ -6,8 +6,7 @@
 //
 //  下载图片服务，底层使用SDWebImageManager,走缓存机制
 
-#import <Foundation/Foundation.h>
-#import "foundation/_foundation.h"
+#import "_foundation.h"
 
 @interface ImageDownloader : NSObject
 
