@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "foundation/_foundation.h"
-#import "system/_system.h"
+#import "_greats.h"
 
 @interface LogUploader : NSObject
 

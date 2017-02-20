@@ -6,9 +6,12 @@
 //  Copyright (c) 2014 QQing. All rights reserved.
 
 // 统一使用SDImageCache
-
-#import "QQingImageView.h"
+#import "_precompile.h"
+#import "LoadingImageView.h"
 #import "UIImageView+WebCache.h"
+#import "QQingProgressView.h"
+
+//#error "该文件还没有调试"
 
 @interface QQingImageView ()
 

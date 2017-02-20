@@ -28,16 +28,6 @@
 - (NSString *)getUrlWithChannelled {
     __block NSString *channelId = nil;
     
-    [AppConfig adapterAppHairDresser:^{
-        channelId = nil;
-    } appCustomer:^{
-        channelId = nil;
-    } appMaster:^{
-        channelId = nil;
-        
-        NSAssert(channelId, @"");
-    }];
-    
     return [self.class convertUrl:self.originUrl withChannelId:channelId enabled:YES];
 }
 

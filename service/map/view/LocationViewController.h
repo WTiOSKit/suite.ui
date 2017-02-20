@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchAPI.h>
+#import "BaseViewController.h"
 
 typedef enum : NSUInteger {
     SelectAddressType_Default,

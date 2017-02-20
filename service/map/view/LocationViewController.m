@@ -7,7 +7,7 @@
 //
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
-
+#import "_ui_core.h"
 #import "LocationViewController.h"
 #import "AddressInputHintViewController.h"
 #import "LocationService.h"
@@ -313,7 +313,7 @@ static CGFloat AutoLocationViewWidthConstant = 0;
 - (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation {
     if(updatingLocation) {
         //取出当前位置的坐标
-        DDLogDebug(@"地址选择页.经纬度更新 latitude : %f,longitude: %f", userLocation.coordinate.latitude, userLocation.coordinate.longitude);
+        LOG(@"地址选择页.经纬度更新 latitude : %f,longitude: %f", userLocation.coordinate.latitude, userLocation.coordinate.longitude);
         
         // 第一进入 or 你地址搜索失败，则进行定位，同时逆地址编码，填充“所在区域”的地址信息
         if (self.firstIn ||
@@ -328,7 +328,7 @@ static CGFloat AutoLocationViewWidthConstant = 0;
 }
 
 - (void)mapView:(MAMapView *)mapView didFailToLocateUserWithError:(NSError *)error {
-    DDLogError(@"地址选择页.定位失败，errror = %@",error);
+    LOG(@"地址选择页.定位失败，errror = %@",error);
 }
 
 - (void)mapView:(MAMapView *)mapView regionDidChangeAnimated:(BOOL)animated {

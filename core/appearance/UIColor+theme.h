@@ -65,7 +65,7 @@
 /**
  *  hair cut
  *
- *  @return 
+ *  @return UIColor *
  */
 + (UIColor *)fontDeepBlackColor;
 

@@ -24,7 +24,6 @@
 #import "UIView+SDExtension.h"
 #import "TAPageControl.h"
 #import "SDWebImageManager.h"
-#import "ReactiveCocoa/RACEXTScope.h"
 
 
 NSString * const ID = @"cycleCell";

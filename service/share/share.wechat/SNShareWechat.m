@@ -6,9 +6,13 @@
 //  Copyright © 2016 OpenTeam. All rights reserved.
 //
 
+#import "_greats.h"
+#import "WechatPayService.h"
 #import "SNShareWechat.h"
 #import "WXApi.h"
 #import "ImageUtil.h"
+#import "_easycoding.h"
+#import "_vendor_lumberjack.h"
 
 @interface SNShareWechat () <WXApiDelegate>
 
@@ -122,13 +126,13 @@
  *
  * 收到一个来自微信的处理结果。调用一次sendReq后会收到onResp。
  * 可能收到的处理结果有SendMessageToWXResp、SendAuthResp等。
- * @param resp具体的回应内容，是自动释放的
+ * @param resp 具体的回应内容，是自动释放的
  */
 - (void)onResp:(BaseResp *)resp {
     // 建议支付、分享的应答处理中各自去判断
     
     { // 支付
-        [suite.service.wechatpay process:resp];
+        [G.service.wechatpay process:resp];
     }
     
     { // 分享

@@ -6,6 +6,7 @@
 //  Copyright (c) 2012-2015 Hesham Abd-Elmegid. All rights reserved.
 //
 
+#import "_ui_core.h"
 #import "HMSegmentedControl.h"
 #import <QuartzCore/QuartzCore.h>
 #import <math.h>

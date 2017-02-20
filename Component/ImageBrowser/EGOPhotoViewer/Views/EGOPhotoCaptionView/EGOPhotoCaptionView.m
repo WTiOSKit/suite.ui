@@ -44,9 +44,6 @@
 		_textLabel.shadowColor = [UIColor blackColor];
 		_textLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
 		[self addSubview:_textLabel];
-		[_textLabel release];
-		
-							  
     }
     return self;
 }
@@ -125,15 +122,5 @@
 	_hidden=hidden;
 	
 }
-
-
-#pragma mark -
-#pragma mark Dealloc
-
-- (void)dealloc {
-	_textLabel=nil;
-    [super dealloc];
-}
-
 
 @end

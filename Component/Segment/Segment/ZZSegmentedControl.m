@@ -7,6 +7,9 @@
 //
 
 #import "ZZSegmentedControl.h"
+#import "_precompile.h"
+#import "_ui_core.h"
+
 @interface ZZSegmentedControl()
 @property(nonatomic,strong)UILabel *lineLabel;
 @property(nonatomic,strong)UILabel *lineLabel1;

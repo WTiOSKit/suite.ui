@@ -7,8 +7,7 @@
 //
 // 用户注册城市本地存储(使用UserDefault)
 
-#import <Foundation/Foundation.h>
-#import "foundation/_foundation.h"
+#import "_greats.h"
 #import "LocationModel.h"
 
 extern NSString * const kDefaultUserCityName;

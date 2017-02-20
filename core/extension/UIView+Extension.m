@@ -335,6 +335,73 @@
     return nil;
 }
 
+#pragma mark - 
+
+- (id)findSubViewWithSubViewClass:(Class)clazz {
+    for (id subView in self.subviews) {
+        if ([subView isKindOfClass:clazz]) {
+            return subView;
+        }
+    }
+    
+    return nil;
+}
+
+- (id)findSuperViewWithSuperViewClass:(Class)clazz {
+    if (self == nil) {
+        return nil;
+    } else if (self.superview == nil) {
+        return nil;
+    } else if ([self.superview isKindOfClass:clazz]) {
+        return self.superview;
+    } else {
+        return [self.superview findSuperViewWithSuperViewClass:clazz];
+    }
+}
+
+- (BOOL)findAndResignFirstResponder {
+    if (self.isFirstResponder) {
+        [self resignFirstResponder];
+        return YES;
+    }
+    
+    for (UIView *v in self.subviews) {
+        if ([v findAndResignFirstResponder]) {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
+- (UIView *)findFirstResponder {
+    if (([self isKindOfClass:[UITextField class]] || [self isKindOfClass:[UITextView class]])
+        && (self.isFirstResponder)) {
+        return self;
+    }
+    
+    for (UIView *v in self.subviews) {
+        UIView *fv = [v findFirstResponder];
+        if (fv) {
+            return fv;
+        }
+    }
+    
+    return nil;
+}
+
+- (UIViewController *)jviewController {
+    UIResponder *responder = self.nextResponder;
+    do {
+        if ([responder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)responder;
+        }
+        responder = responder.nextResponder;
+    } while (responder);
+    return nil;
+}
+
+
 @end
 
 #pragma mark - 构造器

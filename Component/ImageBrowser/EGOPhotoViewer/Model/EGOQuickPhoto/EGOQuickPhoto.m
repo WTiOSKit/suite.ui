@@ -31,10 +31,10 @@
 
 - (id)initWithImageURL:(NSURL*)aURL name:(NSString*)aName image:(UIImage*)aImage previewImage:(UIImage *)previewImage {
     if (self = [super init]) {
-		_URL = [aURL retain];
-		_caption = [aName retain];
-		_image = [aImage retain];
-		_previewImage = [previewImage retain];
+		_URL = [aURL copy];
+		_caption = [aName copy];
+		_image = [aImage copy];
+		_previewImage = [previewImage copy];
 	}
 	
 	return self;
@@ -58,15 +58,6 @@
 
 - (id)initWithImage:(UIImage*)aImage {
     return [self initWithImageURL:nil name:nil image:aImage previewImage:nil];
-}
-
-- (void)dealloc {
-	[_URL release], _URL=nil;
-	[_image release], _image=nil;
-    [_previewImage release], _previewImage=nil;
-	[_caption release], _caption=nil;
-	
-	[super dealloc];
 }
 
 @end

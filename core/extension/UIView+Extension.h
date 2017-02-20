@@ -65,6 +65,13 @@
 
 - (UIViewController *)firstTopViewController;
 
+#pragma mark - 
+
+- (id)findSuperViewWithSuperViewClass:(Class)clazz; // 找到指定类名的SuperView对象
+- (BOOL)findAndResignFirstResponder; // 找到并且resign第一响应者
+- (UIView *)findFirstResponder; // 找到第一响应者
+@property (readonly) UIViewController *viewController; //找到当前view所在的viewcontroler
+
 @end
 
 #pragma mark - 构造器
@@ -112,7 +119,7 @@
 /**
  *  四个边角分别加远角
  *
- *  @param dist 半径
+ *  @param radius 半径
  *  @param type UIRectCornerTopLeft|UIRectCornerTopRight
  */
 - (void)circular:(CGFloat)radius rectCorner:(UIRectCorner)type;

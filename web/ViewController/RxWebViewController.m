@@ -6,10 +6,10 @@
 //  Copyright © 2015年 roxasora. All rights reserved.
 //
 
+#import "_ui_core.h"
 #import "RxWebViewController.h"
 #import "NJKWebViewProgress.h"
 #import "NJKWebViewProgressView.h"
-#import "mvc/mvc-native.h"
 
 #define boundsWidth self.view.bounds.size.width
 #define boundsHeight self.view.bounds.size.height

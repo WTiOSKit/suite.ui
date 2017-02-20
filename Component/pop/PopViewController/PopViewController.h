@@ -6,7 +6,7 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+#import "_precompile.h"
 
 typedef enum : NSUInteger {
     PopViewControllerAnimateType_Default,

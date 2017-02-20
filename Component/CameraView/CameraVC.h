@@ -6,7 +6,8 @@
 //  Copyright © 2016年 Singer. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "_ui_core.h"
+#import "FastttCamera.h"
 
 @interface CameraVC : BaseViewController
 

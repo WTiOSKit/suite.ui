@@ -10,6 +10,7 @@
 #import "SRActionSheet.h"
 #import "QRCodeReaderViewController.h"
 #import "AssetsService.h"
+#import "_ui_core.h"
 
 @interface QRCodePresentVC () {
     // user profile view

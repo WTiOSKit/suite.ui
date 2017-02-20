@@ -6,7 +6,7 @@
 //
 //
 
-#import "foundation/_foundation.h"
+#import "_greats.h"
 
 /**
  *  这里定义log type

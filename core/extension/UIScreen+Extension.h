@@ -71,4 +71,11 @@
 
 + (CGFloat)height;
 
++ (CGSize)size;
+
++ (CGSize)orientationSize;
++ (CGFloat)orientationWidth;
++ (CGFloat)orientationHeight;
++ (CGSize)DPISize;
+
 @end

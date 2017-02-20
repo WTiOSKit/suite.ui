@@ -5,9 +5,8 @@
 //  Created by fallen on 15/8/4.
 //
 
-#import "foundation/_foundation.h"
-#import "_utility.h"
-#import "_core_network.h"
+#import "_greats.h"
+#import "_tools.h"
 #import "ImageUploader.h"
 #import "ImageUploadApi.h"
 

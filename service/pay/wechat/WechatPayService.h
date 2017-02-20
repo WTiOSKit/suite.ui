@@ -6,8 +6,7 @@
 //
 //
 
-#import "foundation/_foundation.h"
-#import "system/_system.h"
+#import "_greats.h"
 #import "PayService.h"
 #import "WechatPayOrder.h"
 #import "WechatPayConfig.h"

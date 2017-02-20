@@ -19,7 +19,7 @@
  * Called with the picker the images were selected from, as well as an array of dictionary's
  * containing keys for ALAssetPropertyLocation, ALAssetPropertyType, 
  * UIImagePickerControllerOriginalImage, and UIImagePickerControllerReferenceURL.
- * @param picker
+ * @param picker default
  * @param info An NSArray containing dictionary's with the key UIImagePickerControllerOriginalImage, which is a rotated, and sized for the screen 'default representation' of the image selected. If you want to get the original image, use the UIImagePickerControllerReferenceURL key.
  */
 - (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info;

@@ -19,17 +19,21 @@
 @def_prop_instance(ComponentMapConfig, config)
 
 + (void)load {
-    [AppConfig adapterAppHairDresser:^{
-        [self sharedInstance].config.apiKey = SdkKey_GaoDe_HairDresser;
-    } appCustomer:^{
-        [self sharedInstance].config.apiKey = SdkKey_GaoDe_Customer;
-    } appMaster:^{
-        [self sharedInstance].config.apiKey = SdkKey_GaoDe_Customer;
-    }];
+
+    exceptioning(@"请配置api key")
+//    [AppConfig adapterAppHairDresser:^{
+//        [self sharedInstance].config.apiKey = SdkKey_GaoDe_HairDresser;
+//    } appCustomer:^{
+//        [self sharedInstance].config.apiKey = SdkKey_GaoDe_Customer;
+//    } appMaster:^{
+//        [self sharedInstance].config.apiKey = SdkKey_GaoDe_Customer;
+//    }];
 }
 
 - (void)initGDAPIKey { // 高德 MapKit configure.
-    if ([GDMapAPIKey length] == 0) {
+    // if ([GDMapAPIKey length] == 0)
+    exceptioning(@"请配置api key")
+    {
 #define kMALogTitle @"提示"
 #define kMALogContent @"apiKey为空，请检查key是否正确设置"
         

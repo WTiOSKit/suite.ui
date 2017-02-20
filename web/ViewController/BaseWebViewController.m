@@ -9,8 +9,9 @@
 #import "WebApi.h"
 #import "BaseWebViewController.h"
 #import "EasyJSBridge.h"
-#import "vendor/ui.MBProgressHUD/MBProgressHUD.h"
-#import "_captain.h"
+#import "MBProgressHUD.h"
+#import "_greats.h"
+#import "_tools.h"
 
 #define kWebFailedViewHeight    200.0f
 #define kWebFailedViewWidth     320.0f

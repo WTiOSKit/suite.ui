@@ -7,7 +7,7 @@
 //
 
 #import "_precompile.h"
-#import "foundation/_foundation.h"
+#import "_greats.h"
 
 /**
  *  已经与android端，统一

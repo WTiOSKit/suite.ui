@@ -7,6 +7,7 @@
 //
 
 #import "HXTagCollectionViewCell.h"
+#import "_ui_core.h"
 
 @implementation HXTagCollectionViewCell
 

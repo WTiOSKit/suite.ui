@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TextFieldDelegate.h"
 
 @interface _TextField : UITextField
 

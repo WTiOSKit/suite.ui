@@ -1,7 +1,7 @@
-
+#import <objc/runtime.h>
+#import "_pragma_push.h"
 #import "_UISignal.h"
 #import "UIView+UISignal.h"
-#import <objc/runtime.h>
 
 #pragma mark -
 
@@ -211,8 +211,7 @@
 			selectorName = [NSString stringWithFormat:@"handleUISignal_%@_%@:", clazz, method];
 			selector = NSSelectorFromString(selectorName);
 			
-			if ( [targetObject respondsToSelector:selector] )
-			{
+			if ( [targetObject respondsToSelector:selector] ) {
 				[targetObject performSelector:selector withObject:self];
 				return;
 			}
@@ -301,41 +300,24 @@
 
 }
 
-- (BOOL)boolValue
-{
-	if ( self.returnValue == _UISignal.YES_VALUE )
-	{
+- (BOOL)boolValue {
+	if ( self.returnValue == _UISignal.YES_VALUE ) {
 		return YES;
-	}
-	else if ( self.returnValue == _UISignal.NO_VALUE )
-	{
+	} else if ( self.returnValue == _UISignal.NO_VALUE ) {
 		return NO;
 	}
 	
 	return NO;
 }
 
-- (void)returnYES
-{
+- (void)returnYES {
 	self.returnValue = _UISignal.YES_VALUE;
 }
 
-- (void)returnNO
-{
+- (void)returnNO {
 	self.returnValue = _UISignal.NO_VALUE;
 }
 
-- (void)dealloc
-{
-#if __has_feature(objc_arc)
-#else
-	[_name release];
-
-	[_object release];
-	[_returnValue release];
-	
-	[super dealloc];
-#endif
-}
-
 @end
+
+#import "_pragma_pop.h"

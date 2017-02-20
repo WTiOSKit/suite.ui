@@ -103,6 +103,9 @@
  */
 @interface UIButton ( Enlarge )
 
+/**
+ *  设置按钮额外热区
+ */
 @property (nonatomic, assign) UIEdgeInsets touchAreaInsets;
 
 /**
@@ -117,6 +120,14 @@
                          left:(CGFloat)left
                        bottom:(CGFloat)bottom
                         right:(CGFloat)right;
+
+@end
+
+#pragma mark - 
+
+@interface UIButton ( CountDown )
+
+- (void)startTime:(NSInteger )timeout title:(NSString *)tittle waitTittle:(NSString *)waitTittle;
 
 @end
 

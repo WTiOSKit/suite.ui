@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "EasyJSWebView.h"
-#import "mvc-native.h"
+#import "_ui_core.h"
 
 @protocol WebViewJavaScriptReceiver;
 

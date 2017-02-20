@@ -7,7 +7,7 @@
 //
 
 #import "UITableView+Extension.h"
-#import "foundation/_foundation.h"
+#import "NSIndexPath+Extension.h"
 
 @implementation UITableView (Extension)
 

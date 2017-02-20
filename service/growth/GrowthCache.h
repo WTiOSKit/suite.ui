@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "foundation/_foundation.h"
+#import "_greats.h"
 #import "_vendor_realm.h"
 
 @interface Growth : RLMObject

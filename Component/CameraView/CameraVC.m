@@ -7,7 +7,6 @@
 //
 
 #import "CameraVC.h"
-#import "FastttCamera.h"
 #import "PhotoManager.h"
 
 #pragma mark -
@@ -121,7 +120,7 @@ didFinishScalingCapturedImage:(FastttCapturedImage *)capturedImage {
      *  Here, capturedImage.scaledImage contains the scaled-down version
      *  of the image.
      */
-    [[PhotoManager sharedInstance] savePhoto:capturedImage.scaledImage];
+//    [[PhotoManager sharedInstance] savePhoto:capturedImage.scaledImage];
 }
 
 - (void)cameraController:(FastttCamera *)cameraController

@@ -6,7 +6,7 @@
 //  Copyright © 2016 OpenTeam. All rights reserved.
 //
 
-#import <foundation/foundation.h>
+#import "_greats.h"
 
 @class ComponentMapConfig;
 

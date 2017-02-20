@@ -10,7 +10,8 @@
 #import "MJRefreshConst.h"
 #import "UIView+Extension.h"
 #import "UIScrollView+Extension.h"
-#import <objc/message.h>
+#import "_appearance.h"
+#import <objc/runtime.h>
 
 @interface  MJRefreshBaseView()
 {

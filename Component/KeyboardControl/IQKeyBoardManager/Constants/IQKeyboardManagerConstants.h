@@ -25,6 +25,7 @@
 #define IQKeyboardManagerConstants_h
 
 #import <Foundation/NSObjCRuntime.h>
+#import "NSBundle+Extension.h"
 
 ///----------------
 /// @name Debugging

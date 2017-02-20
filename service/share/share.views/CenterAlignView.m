@@ -7,6 +7,7 @@
 //
 
 #import "CenterAlignView.h"
+#import "_ui_core.h"
 
 @interface CenterAlignView ()
 
