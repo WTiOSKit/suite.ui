@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+GrowthAttributes.h"
-#import "foundation/_foundation.h"
+#import "_foundation.h"
 
 @implementation NSObject (GrowthAttributes)
 

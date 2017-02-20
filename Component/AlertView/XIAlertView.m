@@ -25,7 +25,7 @@
 
 #import <objc/runtime.h>
 #import "_precompile.h"
-#import "foundation/_foundation.h"
+#import "_foundation.h"
 #import "XIAlertView.h"
 #import "XIAlertModalBackgroundView.h"
 

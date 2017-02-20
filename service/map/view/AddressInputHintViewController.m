@@ -8,6 +8,7 @@
 #import <AMapSearchKit/AMapSearchKit.h>
 #import "AddressInputHintViewController.h"
 #import "UserCityService.h"
+#import "_ui_core.h"
 
 @interface AddressInputHintViewController () <UISearchBarDelegate,
                                               UITableViewDataSource,

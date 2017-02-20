@@ -6,6 +6,8 @@
 //  Copyright (c) 2014年 itcast. All rights reserved.
 //
 
+#import "_precompile.h"
+
 const CGFloat MJRefreshViewHeight = 80.0;
 const CGFloat MJRefreshFastAnimationDuration = 0.25;
 const CGFloat MJRefreshSlowAnimationDuration = 0.4;

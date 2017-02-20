@@ -6,8 +6,11 @@
 //  Copyright © 2015年 Leo. All rights reserved.
 //
 
+#import "_precompile.h"
+#import "_image.h"
 #import "LCTabBarBadge.h"
 #import "LCTabBarCONST.h"
+#import "UIView+Extension.h"
 
 @implementation LCTabBarBadge
 

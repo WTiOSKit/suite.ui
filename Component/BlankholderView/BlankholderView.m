@@ -6,7 +6,12 @@
 //
 //
 
+#import "_precompile.h"
+#import "_exception.h"
+#import "_appearance.h"
+#import "NSString+Size.h"
 #import "BlankholderView.h"
+#import "UIView+Extension.h"
 
 @interface BlankholderView ()
 

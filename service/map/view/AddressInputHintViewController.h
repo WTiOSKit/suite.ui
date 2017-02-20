@@ -6,7 +6,7 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
 @protocol AddressInputHintViewControllerDelegate <NSObject>
 

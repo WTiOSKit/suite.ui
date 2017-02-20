@@ -6,6 +6,8 @@
 //  Copyright © 2016 soulghost. All rights reserved.
 //
 
+#import "_precompile.h"
+#import "_ui_core.h"
 #import "SGGuideDispatcher.h"
 #import "SGGuideMaskView.h"
 #import "SGGuideNode.h"

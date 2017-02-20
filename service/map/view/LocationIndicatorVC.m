@@ -6,6 +6,10 @@
 //
 //
 
+#import "_vendor_lumberjack.h"
+#import "_router.h"
+#import "_Router+hybrid.h"
+#import "LocationService.h"
 #import "LocationIndicatorVC.h"
 #import "AMapSearchKit/AMapSearchKit.h"
 #import "MAMapKit/MAMapKit.h"
@@ -121,7 +125,7 @@
 - (void)bindViewModel {
     @weakify(self);
     RACSignal* sig_currentLocationSuccess = nil;
-    if ([suite.service.location sharedInstance].isLocationComponentEnabled) {
+    if (suite.service.location.isLocationComponentEnabled) {
        sig_currentLocationSuccess = [[RACObserve(self.mapView.userLocation, location) filter:^BOOL(id value) {
             return value != nil;
         }]take:1];
@@ -157,13 +161,17 @@
 
 #pragma mark - 跳转高德应用
 
+#ifndef GDMapH5APIKey
+#define GDMapH5APIKey @"not defined"
+#endif
+
 - (void)openGDAppForSearchRouteWithStartLocation:(CLLocationCoordinate2D)startLocation
                              destinationLocation:(CLLocationCoordinate2D)destinationLocation
                                  destinationName:(NSString*)destinationName {
     MARouteConfig * config = [[MARouteConfig alloc] init];
     config.startCoordinate = startLocation;
     config.destinationCoordinate = destinationLocation;
-    config.appScheme = [_System sharedInstance].urlSchema;
+    config.appScheme = suite.system.info.urlSchema;
     config.appName = app_display_name;
     config.routeType = MARouteSearchTypeDriving;
     //若未调起高德地图App,跳转到高德H5应用

@@ -12,6 +12,7 @@
 #import <TencentOpenAPI/TencentOAuthObject.h>
 #import <TencentOpenAPI/TencentApiInterface.h>
 #import "ImageUtil.h"
+#import "_ui_core.h"
 
 @interface  SNShareQQ () <TencentApiInterfaceDelegate>
 

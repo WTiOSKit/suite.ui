@@ -7,7 +7,7 @@
 //
 
 #import "_Router+hybrid.h"
-#import "web/ViewController/BaseWebViewController.h"
+#import "BaseWebViewController.h"
 
 @implementation _Router (hybrid)
 

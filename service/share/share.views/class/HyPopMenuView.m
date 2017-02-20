@@ -5,11 +5,13 @@
 //  Created by  H y on 15/9/8.
 //  Copyright (c) 2015年 ouy.Aberi. All rights reserved.
 //
-
-#import "MenuLabel.h"
-#import <pop/POP.h>
-#import "HyPopMenuView.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "_precompile.h"
+#import "_popup.h"
+#import "MenuLabel.h"
+#import "POP.h"
+#import "HyPopMenuView.h"
+#import "UIColor+Extension.h"
 
 #define Duration 0.2
 #define KeyPath @"transform.scale"

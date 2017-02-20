@@ -132,7 +132,7 @@
     // 建议支付、分享的应答处理中各自去判断
     
     { // 支付
-        [G.service.wechatpay process:resp];
+        [suite.service.wechatpay process:resp];
     }
     
     { // 分享
