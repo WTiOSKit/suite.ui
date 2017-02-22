@@ -8,15 +8,13 @@
 
 #import "UIViewController+Tracking.h"
 #import "SGGuideDispatcher.h"
-#import "_aspects.h"
-#import "_notification.h"
-#import <objc/runtime.h>
+#import "_greats.h"
 
 @implementation UIViewController (Tracking)
 
 + (void)load {
 //    method_exchangeImplementations(class_getInstanceMethod([self class], @selector(viewWillAppear:)), class_getInstanceMethod([self class], @selector(track_viewWillAppear:)));
-    
+    TODO("有警告：Aspects: Block signature <NSMethodSignature: 0x608000a6e6c0> doesn't match <NSMethodSignature: 0x608000a68980>.")
     [self aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, NSNumber *anmated){
         [self postNotification:SGGuideTrigNotification withObject:@{@"viewController":self}];
     } error:nil];
