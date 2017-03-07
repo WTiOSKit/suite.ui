@@ -79,4 +79,14 @@
 
 @end
 
+#pragma mark - 
+
+@implementation UIView ( Bind )
+
+- (void)bindWithViewModel:(id)viewModel {
+    
+}
+
+@end
+
 #import "_pragma_pop.h"
