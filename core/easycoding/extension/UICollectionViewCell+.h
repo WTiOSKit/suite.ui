@@ -15,6 +15,14 @@
 
 - (void)setModel:(id)model;
 
++ (CGSize)cellSize;
+- (CGSize)cellSize;
++ (CGSize)cellSizeWithModel:(id)model;
+
++ (CGFloat)cellHeight;
+- (CGFloat)cellHeight;
++ (CGFloat)cellHeightWithModel:(id)model;
+
 #pragma mark - On UITableView
 
 + (void)registerOnNib:(UICollectionView *)collectionView;
